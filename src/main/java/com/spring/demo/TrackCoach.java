@@ -13,6 +13,14 @@ public class TrackCoach implements Coach {
     }
 
     public String getDailyFortune() {
-        return "Just do IT!" + fortuneService.getFortune();
+        return "<<< <<< <<< Just do IT! >>> >>> >>>" + fortuneService.getFortune();
+    }
+
+    public void doMyStartupStuff() {
+        System.out.println("Track Coach - Inside method doMyStartupStuff");
+    }
+
+    public void doMyCleanupStuff() {
+        System.out.println("Track Coach - Inside method doMyCleanupStuff");
     }
 }

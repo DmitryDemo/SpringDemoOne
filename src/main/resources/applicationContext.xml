@@ -23,7 +23,12 @@
 		<constructor-arg ref="myFortune"/>
 	</bean>
 
-	<bean id="cricketCoach" class="com.spring.demo.CricketCoach">
+	<bean id="cricketCoach"
+		  class="com.spring.demo.CricketCoach"
+		  scope="prototype"
+		  init-method="beanInit"
+		  destroy-method="beanCleanup">
+
 		<property name="dailyFortune" ref="randomFortune"></property>
 		<property name="emailAddress" value="${coach.email}"/>
 		<property name="team" value="${coach.team}"/>

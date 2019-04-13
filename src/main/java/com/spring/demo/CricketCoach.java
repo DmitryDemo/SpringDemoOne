@@ -40,4 +40,12 @@ public class CricketCoach implements Coach {
         System.out.println("Cricket coach: inside setter method - setTeam.");
         this.team = team;
     }
+
+    public void beanInit() {
+        System.out.println("\nCricketCoach: this is a beanInit() method.");
+    }
+
+    public void beanCleanup() {
+        System.out.println("\nCricketCoach: this is a beanCleanup() method.");
+    }
 }

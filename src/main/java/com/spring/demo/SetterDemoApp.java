@@ -10,10 +10,12 @@ public class SetterDemoApp {
 
         CricketCoach coach = context.getBean("cricketCoach", CricketCoach.class);
 
-        System.out.println(coach.getDailyWorkout()
-                + "\n" + coach.getDailyFortune()
-                + "\n" + coach.getEmailAddress()
-                + "\n" + coach.getTeam());
+        Coach coach1 = context.getBean("cricketCoach", CricketCoach.class);
+        Coach coach2 = context.getBean("cricketCoach", CricketCoach.class);
+
+        System.out.println("\n<<< <<< <<<Is coach1 is the same as coach 2? " + (coach1 == coach2));
+        System.out.println("\n<<< <<< <<<Coach1 memory path is " + coach1);
+        System.out.println("\n<<< <<< <<<Coach2 memory path is " + coach2);
 
         context.close();
     }
